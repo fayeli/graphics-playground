@@ -59,7 +59,7 @@ function init() {
 
 	// draw the coordinate grid
 	Coordinates.drawGrid({size:1000,scale:0.01, orientation:"x"});
-	Coordinates.drawGrid(size:1000,scale:0.01, orientation:"y"});
+	Coordinates.drawGrid({size:1000,scale:0.01, orientation:"y"});
 	Coordinates.drawGrid({size:1000,scale:0.01, orientation:"z"});
 }
 
