@@ -1,4 +1,3 @@
-"use strict"; 
 
 var camera, scene, renderer;
 var windowScale;
