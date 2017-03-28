@@ -5,18 +5,46 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<title>Faye's Graphics Playground</title>
 		<style>
-			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
-			#container { width: 100%; height: 100%;}
+			body { 
+				margin: 0;
+				overflow: hidden;
+				font-family: Monospace; 
+			}
+			canvas { 
+				width: 100%; 
+				height: 100% 
+			}
 		</style>
+		<link rel="stylesheet" type="text/css" href="sidenav.css">
 	</head>
 	<body>
-		<h1>Hello World!</h1>
-		<div id="container"></div>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#">Demo1</a>
+			<a href="#">Demo2</a>
+			<a href="#">Demo3</a>
+			<a href="#">About</a>
+		</div>
+		<span onclick="openNav()">open</span>
+		<div id="main">
+			<h1>Hello World!</h1>
+			<div id="container"></div>
+		</div>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
   				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   				crossorigin="anonymous"></script>
 		<script src="libs/three.min.js"></script>
 		<script src="js/red-wire-cube.js"></script>
+		<script>
+			function openNav() {
+			    document.getElementById("mySidenav").style.width = "250px";
+			    document.getElementById("main").style.marginLeft = "250px";
+			}
+
+			function closeNav() {
+			    document.getElementById("mySidenav").style.width = "0";
+			    document.getElementById("main").style.marginLeft = "0";
+			}
+		</script>
 	</body>
 </html>
